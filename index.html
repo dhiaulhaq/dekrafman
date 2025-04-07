@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dekrafman - Kerajinan Kulit Premium</title>
+    <meta name="description" content="Kerajinan kulit premium buatan tangan dengan kualitas terbaik.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        :root {
+            --bs-primary: #f97415;
+            --bs-primary-rgb: 249, 116, 21;
+        }
+        .btn-primary {
+            --bs-btn-bg: #f97415;
+            --bs-btn-border-color: #f97415;
+            --bs-btn-hover-bg: #e06813;
+            --bs-btn-hover-border-color: #d46112;
+            --bs-btn-active-bg: #d46112;
+            --bs-btn-active-border-color: #c85b11;
+            --bs-btn-disabled-bg: #f97415;
+            --bs-btn-disabled-border-color: #f97415;
+        }
+        .nav-link.active {
+            color: var(--bs-primary) !important;
+            font-weight: 500;
+        }
+        .text-primary {
+            color: #f97415 !important;
+        }
+        .bg-primary {
+            background-color: #f97415 !important;
+        }
+        .hero-section {
+            height: 600px;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+        .product-card img {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        .nav-link:hover {
+            color: #f97415 !important;
+        }
+        .footer-link:hover {
+            color: #f97415 !important;
+            text-decoration: none;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .social-icon:hover {
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="sticky-top bg-white border-bottom">
+        <div class="container">
+            <nav class="navbar navbar-expand-md py-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-4" href="#">
+                        DEKRAFMAN
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about/index.html">Tentang Kami</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products/index.html">Produk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="location/index.html">Lokasi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq/index.html">FAQ</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block ms-2">
+                                <a class="btn btn-primary" href="https://wa.me/6281334349057">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative">
+        <img src="https://placehold.co/600x400" alt="Kerajinan Kulit Premium" class="position-absolute w-100 h-100 object-fit-cover">
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative h-100 d-flex flex-column justify-content-center text-white">
+            <h1 class="display-4 fw-bold mb-4" style="max-width: 700px;">Kerajinan Kulit Premium Buatan Tangan</h1>
+            <p class="fs-5 mb-4 text-white-50" style="max-width: 500px;">
+                Kami memproduksi barang-barang kulit berkualitas tinggi dengan keahlian dan dedikasi untuk kepuasan pelanggan.
+            </p>
+            <div class="d-flex gap-3">
+                <a href="products/index.html">
+                    <button class="btn btn-primary btn-lg">Lihat Produk</button>
+                </a>
+                <a href="about/index.html">
+                    <button class="btn btn-outline-light btn-lg">Tentang Kami</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 py-md-6 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Tentang Kami</h2>
+                    <p class="text-muted mb-3">
+                        Sejak 2018, kami telah memproduksi kerajinan kulit berkualitas tinggi dengan teknik tradisional yang
+                        dipadukan dengan desain modern.
+                    </p>
+                    <p class="text-muted mb-3">
+                        Setiap produk kami dibuat dengan teliti oleh pengrajin berpengalaman menggunakan bahan kulit asli
+                        terbaik. Kami memastikan setiap jahitan dan detail memenuhi standar kualitas tertinggi.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Komitmen kami adalah memberikan produk yang tidak hanya indah secara estetika, tetapi juga tahan lama
+                        dan fungsional untuk digunakan sehari-hari.
+                    </p>
+                    <a href="about/index.html">
+                        <button class="btn btn-outline-dark d-flex align-items-center gap-2">
+                            Pelajari Lebih Lanjut <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://placehold.co/400" alt="Proses Pembuatan Kerajinan Kulit" class="img-fluid rounded-3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 py-md-6">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Produk Kami</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    Kami menawarkan berbagai macam produk kerajinan kulit berkualitas tinggi, mulai dari sepatu, tas, dompet,
+                    hingga aksesoris.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <a href="products/1.html" class="text-decoration-none text-dark">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="ratio ratio-1x1">
+                                <img src="https://placehold.co/400" class="card-img-top object-fit-cover" alt="Tas Kulit Premium">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Tas Kulit Premium</h5>
+                                <p class="card-text text-muted small">Tas</p>
+                                <p class="card-text fw-bold">Rp 1.250.000</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a href="products/1.html" class="text-decoration-none text-dark">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="ratio ratio-1x1">
+                                <img src="https://placehold.co/400" class="card-img-top object-fit-cover" alt="Sepatu Kulit Klasik">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Sepatu Kulit Klasik</h5>
+                                <p class="card-text text-muted small">Sepatu</p>
+                                <p class="card-text fw-bold">Rp 1.500.000</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a href="products/1.html" class="text-decoration-none text-dark">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="ratio ratio-1x1">
+                                <img src="https://placehold.co/400" class="card-img-top object-fit-cover" alt="Dompet Kulit Minimalis">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dompet Kulit Minimalis</h5>
+                                <p class="card-text text-muted small">Dompet</p>
+                                <p class="card-text fw-bold">Rp 450.000</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a href="products/1.html" class="text-decoration-none text-dark">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="ratio ratio-1x1">
+                                <img src="https://placehold.co/400" class="card-img-top object-fit-cover" alt="Gantungan Kunci Kulit">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Gantungan Kunci Kulit</h5>
+                                <p class="card-text text-muted small">Aksesoris</p>
+                                <p class="card-text fw-bold">Rp 150.000</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="products/index.html">
+                    <button class="btn btn-primary">Lihat Semua Produk</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-5 py-md-6 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Lokasi Kami</h2>
+                    <p class="text-muted mb-4">
+                        Kunjungi workshop dan toko kami untuk melihat langsung proses pembuatan dan koleksi produk kerajinan
+                        kulit kami.
+                    </p>
+                    <div class="mb-4">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-geo-alt-fill text-primary fs-5 me-3"></i>
+                            <div>
+                                <h5 class="fw-medium mb-1">Alamat</h5>
+                                <p class="text-muted mb-0">Kranding, RT.33 RW14, Kranding, Bendorejo, Kec. Pogalan, Kabupaten Trenggalek, Jawa Timur 66371</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-telephone-fill text-primary fs-5 me-3"></i>
+                            <div>
+                                <h5 class="fw-medium mb-1">Telepon</h5>
+                                <p class="text-muted mb-0">+62 813 3434 9057</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="bi bi-envelope-fill text-primary fs-5 me-3"></i>
+                            <div>
+                                <h5 class="fw-medium mb-1">Email</h5>
+                                <p class="text-muted mb-0">info@dekrafman.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://maps.app.goo.gl/hVyesGxrjStWEbK69">
+                        <button class="btn btn-primary">Dapatkan Petunjuk Arah</button>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d246.87406232672225!2d111.7591619!3d-8.1030091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e791b880a67f9c1%3A0x1f51d644c23da9cb!2sdekrafman!5e0!3m2!1sen!2sid!4v1744017743551!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top bg-white">
+        <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+            <div class="fw-bold fs-4 mb-3">
+                DEKRAFMAN
+            </div>
+            <p class="text-muted">
+                Kerajinan kulit premium buatan tangan dengan kualitas terbaik.
+            </p>
+            <h6 class="fw-semibold mt-4 mb-2">Ikuti Kami</h6>
+            <div class="d-flex gap-3">
+                <a href="https://www.instagram.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram text-primary fs-5"></i>
+                </a>
+                <a href="https://www.facebook.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-primary fs-5"></i>
+                </a>
+            </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Produk</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Sepatu</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tas</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Dompet</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Gantungan Kunci</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">Aksesoris</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Halaman</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Beranda</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tentang Kami</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Produk</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Lokasi</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-5">
+            <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+            <ul class="list-unstyled text-muted">
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                Kranding, RT.33 RW14, Kranding, Bendorejo, Kec. Pogalan, Kabupaten Trenggalek, Jawa Timur 66371
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill text-primary me-2"></i>
+                +62 813 3434 9057
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill text-primary me-2"></i>
+                info@dekrafman.com
+                </li>
+            </ul>
+            <div class="mt-4">
+                <h6 class="fw-semibold mb-2">Belanja di Marketplace</h6>
+                <div class="d-flex gap-2">
+                    <a href="https://www.tokopedia.com/dekrafman" class="btn btn-sm text-white" style="background-color: #42B549;">Tokopedia</a>
+                    <a href="https://shopee.co.id/dekrafman" class="btn btn-sm text-white" style="background-color: #EE4D2D;">Shopee</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="pt-4 mt-5 border-top text-center text-muted small">
+            © <script>document.write(new Date().getFullYear())</script> Dekrafman. Hak Cipta Dilindungi.
+        </div>
+        </div>
+    </footer>  
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
