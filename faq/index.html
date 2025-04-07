@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Dekrafman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --bs-primary: #f97415;
+            --bs-primary-rgb: 249, 116, 21;
+        }
+        
+        .bg-primary {
+            background-color: var(--bs-primary) !important;
+        }
+        
+        .text-primary {
+            color: var(--bs-primary) !important;
+        }
+        
+        /* .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        } */
+
+        .btn-primary {
+            --bs-btn-bg: #f97415;
+            --bs-btn-border-color: #f97415;
+            --bs-btn-hover-bg: #e06813;
+            --bs-btn-hover-border-color: #d46112;
+            --bs-btn-active-bg: #d46112;
+            --bs-btn-active-border-color: #c85b11;
+            --bs-btn-disabled-bg: #f97415;
+            --bs-btn-disabled-border-color: #f97415;
+        }
+        
+        .btn-outline-primary {
+            color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            color: var(--bs-primary);
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+        }
+        
+        .nav-link.active {
+            color: var(--bs-primary) !important;
+            font-weight: 500;
+        }
+        
+        .bg-muted {
+            background-color: rgba(var(--bs-primary-rgb), 0.05);
+        }
+        
+        .text-muted-foreground {
+            color: #6c757d;
+        }
+        
+        .hero-section {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+            border-radius: 50%;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        /* .social-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        } */
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .social-icon:hover {
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navigation -->
+    <header class="sticky-top bg-white border-bottom">
+        <div class="container">
+            <nav class="navbar navbar-expand-md py-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-4" href="../index.html">
+                        DEKRAFMAN
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../about/index.html">Tentang Kami</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../products/index.html">Produk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../location/index.html">Lokasi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../faq/index.html">FAQ</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block ms-2">
+                                <a class="btn btn-primary" href="https://wa.me/6281334349057">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="https://placehold.co/600x400" alt="Hubungi Dekrafman" class="img-fluid">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1 class="display-4 fw-bold mb-4">Pertanyaan Umum</h1>
+            <p class="lead text-gray-300 max-w-2xl mx-auto">
+                Jawaban atas pertanyaan yang sering diajukan tentang produk dan layanan kami
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+
+    <section class="py-5">
+        <div class="container">
+            <div class="accordion mx-auto" id="faqAccordion" style="max-width: 700px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Bagaimana cara merawat produk kulit?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Produk kulit sebaiknya dibersihkan dengan kain lembab dan dibiarkan kering secara alami. Hindari
+                            paparan sinar matahari langsung dalam waktu lama. Gunakan leather conditioner secara berkala untuk
+                            menjaga kelembaban kulit. Simpan di tempat kering dan berventilasi baik, dan hindari kontak dengan
+                            bahan kimia keras atau alkohol.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Berapa lama waktu pengerjaan untuk produk custom?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Waktu pengerjaan untuk produk custom bervariasi tergantung pada kompleksitas desain dan beban kerja
+                            saat ini. Secara umum, produk custom membutuhkan waktu 2-4 minggu untuk diselesaikan. Kami akan
+                            memberikan estimasi waktu yang lebih akurat setelah menerima detail pesanan Anda.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Apakah Dekrafman menerima pesanan grosir?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ya, kami menerima pesanan grosir untuk semua produk kami. Kami menawarkan harga khusus untuk pembelian
+                            dalam jumlah besar. Silakan hubungi tim penjualan kami untuk informasi lebih lanjut tentang harga
+                            grosir dan persyaratan minimum pemesanan.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Apakah produk Dekrafman menggunakan kulit asli?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ya, semua produk Dekrafman dibuat menggunakan kulit sapi asli berkualitas tinggi. Kami memilih dengan
+                            teliti setiap lembar kulit untuk memastikan kualitas dan ketahanan produk kami. Kami juga memastikan
+                            bahwa kulit yang kami gunakan berasal dari sumber yang bertanggung jawab dan berkelanjutan.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            Apakah Dekrafman melayani pengiriman internasional?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ya, kami melayani pengiriman ke seluruh dunia. Biaya pengiriman internasional bervariasi tergantung
+                            pada negara tujuan dan berat paket. Waktu pengiriman biasanya berkisar antara 7-21 hari kerja,
+                            tergantung pada lokasi dan metode pengiriman yang dipilih.
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                    Bagaimana cara memesan produk?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                    Anda dapat memesan produk kami melalui website, menghubungi kami via telepon, atau mengunjungi toko kami secara langsung. 
+                    Untuk pesanan khusus, kami sarankan untuk menghubungi kami terlebih dahulu untuk mendiskusikan detail dan kebutuhan Anda.
+                    </div>
+                </div>
+                </div>
+        
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                    Berapa lama waktu pengiriman?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                    Untuk pengiriman dalam kabupaten Trenggalek, biasanya membutuhkan waktu 1-2 hari kerja. 
+                    Untuk pengiriman ke kota-kota besar di Jawa, membutuhkan waktu 2-4 hari kerja. 
+                    Untuk pengiriman ke luar Jawa dan daerah terpencil, membutuhkan waktu 5-7 hari kerja. 
+                    Pengiriman internasional membutuhkan waktu 7-21 hari kerja tergantung negara tujuan.
+                    </div>
+                </div>
+                </div>
+        
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                    Apakah ada garansi untuk produk?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                    Ya, semua produk Dekrafman memiliki garansi selama 1 tahun untuk kerusakan pada jahitan dan hardware. 
+                    Garansi tidak berlaku untuk kerusakan akibat penggunaan yang tidak wajar, kecelakaan, atau perawatan yang tidak tepat. 
+                    Silakan hubungi kami jika Anda memiliki masalah dengan produk kami.
+                    </div>
+                </div>
+                </div>
+        
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                    Apakah bisa melakukan pengembalian atau penukaran?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                    Kami menerima pengembalian atau penukaran dalam waktu 7 hari setelah produk diterima, dengan syarat produk masih dalam kondisi baru, 
+                    belum digunakan, dan dengan kemasan asli. Untuk produk custom atau yang dibuat khusus sesuai pesanan, 
+                    kami tidak menerima pengembalian kecuali ada cacat produksi.
+                    </div>
+                </div>
+                </div>
+        
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                    Metode pembayaran apa saja yang tersedia?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                    Kami menerima pembayaran melalui transfer bank, kartu kredit/debit, e-wallet (GoPay, OVO, Dana, LinkAja), 
+                    dan pembayaran tunai untuk pembelian langsung di toko. Untuk pesanan online, pembayaran harus dilunasi sebelum produk dikirim.
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="text-center">
+            <div class="mb-3">
+            <i class="bi bi-question-circle text-primary" style="font-size: 2rem;"></i>
+            </div>
+            <h4 class="fw-bold">Masih punya pertanyaan?</h4>
+            <p class="text-muted mx-auto" style="max-width: 500px;">
+            Jika Anda tidak menemukan jawaban yang Anda cari, jangan ragu untuk menghubungi tim layanan pelanggan kami.
+            </p>
+            <a href="https://wa.me/6281334349057" class="btn btn-primary btn-lg">Hubungi Kami</a>
+        </div>
+    </section>  
+
+    <!-- Footer -->
+    <footer class="border-top bg-white">
+        <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+            <div class="fw-bold fs-4 mb-3">
+                DEKRAFMAN
+            </div>
+            <p class="text-muted">
+                Kerajinan kulit premium buatan tangan dengan kualitas terbaik.
+            </p>
+            <h6 class="fw-semibold mt-4 mb-2">Ikuti Kami</h6>
+            <div class="d-flex gap-3">
+                <a href="https://www.instagram.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram text-primary fs-5"></i>
+                </a>
+                <a href="https://www.facebook.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-primary fs-5"></i>
+                </a>
+            </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Produk</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Sepatu</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tas</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Dompet</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Gantungan Kunci</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">Aksesoris</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Halaman</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Beranda</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tentang Kami</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Produk</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Lokasi</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-5">
+            <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+            <ul class="list-unstyled text-muted">
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                Kranding, RT.33 RW14, Kranding, Bendorejo, Kec. Pogalan, Kabupaten Trenggalek, Jawa Timur 66371
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill text-primary me-2"></i>
+                +62 813 3434 9057
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill text-primary me-2"></i>
+                info@dekrafman.com
+                </li>
+            </ul>
+            <div class="mt-4">
+                <h6 class="fw-semibold mb-2">Belanja di Marketplace</h6>
+                <div class="d-flex gap-2">
+                    <a href="https://www.tokopedia.com/dekrafman" class="btn btn-sm text-white" style="background-color: #42B549;">Tokopedia</a>
+                    <a href="https://shopee.co.id/dekrafman" class="btn btn-sm text-white" style="background-color: #EE4D2D;">Shopee</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="pt-4 mt-5 border-top text-center text-muted small">
+            © <script>document.write(new Date().getFullYear())</script> Dekrafman. Hak Cipta Dilindungi.
+        </div>
+        </div>
+    </footer>  
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
