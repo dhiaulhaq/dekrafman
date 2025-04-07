@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Dekrafman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --bs-primary: #f97415;
+            --bs-primary-rgb: 249, 116, 21;
+        }
+        
+        .bg-primary {
+            background-color: var(--bs-primary) !important;
+        }
+        
+        .text-primary {
+            color: var(--bs-primary) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .btn-outline-primary {
+            color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            color: var(--bs-primary);
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+        }
+        
+        .nav-link.active {
+            color: var(--bs-primary) !important;
+            font-weight: 500;
+        }
+        
+        .bg-muted {
+            background-color: rgba(var(--bs-primary-rgb), 0.05);
+        }
+        
+        .text-muted-foreground {
+            color: #6c757d;
+        }
+        
+        .hero-section {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .value-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .process-icon {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .social-icon:hover {
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navigation -->
+    <header class="sticky-top bg-white border-bottom">
+        <div class="container">
+            <nav class="navbar navbar-expand-md py-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-4" href="../index.html">
+                        DEKRAFMAN
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../about/index.html">Tentang Kami</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../products/index.html">Produk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../location/index.html">Lokasi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../faq/index.html">FAQ</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block ms-2">
+                                <a class="btn btn-primary" href="https://wa.me/6281334349057">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="https://placehold.co/600x400" alt="Workshop Kerajinan Kulit" class="img-fluid">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1 class="display-4 fw-bold mb-4">Tentang Kami</h1>
+            <p class="lead text-gray-300 max-w-2xl mx-auto">
+                Mengenal lebih dekat Dekrafman, pengrajin kulit premium sejak 2010
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-5 py-md-6">
+        <div class="container">
+            <div class="row align-items-center g-4 g-md-5">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Cerita Kami</h2>
+                    <p class="text-muted-foreground">
+                        Dekrafman didirikan pada tahun 2018 oleh Bapak Wahid, seorang pengrajin kulit berpengalaman
+                        yang memiliki visi untuk melestarikan seni kerajinan kulit tradisional Indonesia sambil mengadopsi
+                        desain modern yang diminati pasar global.
+                    </p>
+                    <p class="text-muted-foreground mt-3">
+                        Berawal dari workshop kecil di Trenggalek dengan hanya 3 pengrajin, Dekrafman kini telah berkembang
+                        menjadi salah satu produsen kerajinan kulit terkemuka di Indonesia dengan lebih dari 50 pengrajin
+                        terampil.
+                    </p>
+                    <p class="text-muted-foreground mt-3">
+                        Setiap produk Dekrafman dibuat dengan penuh dedikasi dan ketelitian, menggunakan bahan kulit asli
+                        berkualitas tinggi dan teknik pengerjaan tradisional yang diwariskan dari generasi ke generasi,
+                        dipadukan dengan sentuhan desain kontemporer.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-1x1">
+                        <img src="https://placehold.co/400" alt="Pendiri Dekrafman" class="object-cover rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-5 py-md-6 bg-muted">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Visi & Misi</h2>
+                <p class="text-muted-foreground max-w-3xl mx-auto">
+                    Komitmen kami untuk menghadirkan produk kerajinan kulit berkualitas tinggi
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center pt-4">
+                            <div class="value-icon mx-auto">
+                                <i class="bi bi-trophy fs-4 text-primary"></i>
+                            </div>
+                            <h3 class="fw-bold mb-3">Visi</h3>
+                            <p class="text-muted-foreground">
+                                Menjadi perusahaan kerajinan kulit terkemuka di Indonesia yang dikenal secara global atas kualitas,
+                                inovasi, dan pelestarian warisan budaya kerajinan kulit tradisional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body pt-4">
+                            <div class="value-icon mx-auto">
+                                <i class="bi bi-check-circle fs-4 text-primary"></i>
+                            </div>
+                            <h3 class="fw-bold mb-3 text-center">Misi</h3>
+                            <ul class="list-unstyled text-muted-foreground">
+                                <li class="d-flex align-items-start gap-2 mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary mt-1"></i>
+                                    <span>Menghasilkan produk kerajinan kulit berkualitas tinggi dengan standar internasional</span>
+                                </li>
+                                <li class="d-flex align-items-start gap-2 mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary mt-1"></i>
+                                    <span>Melestarikan dan mengembangkan teknik kerajinan kulit tradisional</span>
+                                </li>
+                                <li class="d-flex align-items-start gap-2 mb-2">
+                                    <i class="bi bi-check-circle-fill text-primary mt-1"></i>
+                                    <span>Memberdayakan pengrajin lokal dan menciptakan lapangan kerja</span>
+                                </li>
+                                <li class="d-flex align-items-start gap-2">
+                                    <i class="bi bi-check-circle-fill text-primary mt-1"></i>
+                                    <span>Menerapkan praktik bisnis yang berkelanjutan dan ramah lingkungan</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-5 py-md-6">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Nilai-Nilai Kami</h2>
+                <p class="text-muted-foreground max-w-3xl mx-auto">
+                    Prinsip yang menjadi landasan dalam setiap langkah kami
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center pt-4">
+                            <div class="value-icon mx-auto">
+                                <i class="bi bi-award fs-4 text-primary"></i>
+                            </div>
+                            <h3 class="fw-bold mb-2">Kualitas</h3>
+                            <p class="text-muted-foreground">
+                                Kami berkomitmen untuk selalu menghasilkan produk dengan kualitas terbaik tanpa kompromi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center pt-4">
+                            <div class="value-icon mx-auto">
+                                <i class="bi bi-people fs-4 text-primary"></i>
+                            </div>
+                            <h3 class="fw-bold mb-2">Kerjasama</h3>
+                            <p class="text-muted-foreground">
+                                Kami percaya bahwa hasil terbaik dicapai melalui kolaborasi dan kerjasama tim yang solid.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center pt-4">
+                            <div class="value-icon mx-auto">
+                                <i class="bi bi-shield-check fs-4 text-primary"></i>
+                            </div>
+                            <h3 class="fw-bold mb-2">Integritas</h3>
+                            <p class="text-muted-foreground">
+                                Kami menjalankan bisnis dengan kejujuran, transparansi, dan etika yang tinggi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center pt-4">
+                            <div class="value-icon mx-auto">
+                                <i class="bi bi-lightbulb fs-4 text-primary"></i>
+                            </div>
+                            <h3 class="fw-bold mb-2">Inovasi</h3>
+                            <p class="text-muted-foreground">
+                                Kami terus berinovasi untuk mengembangkan produk dan proses yang lebih baik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crafting Process -->
+    <section class="py-5 py-md-6 bg-muted">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Proses Pembuatan</h2>
+                <p class="text-muted-foreground max-w-3xl mx-auto">
+                    Setiap produk Dekrafman melalui proses pembuatan yang teliti dan penuh keahlian
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="bi bi-folder2-open fs-4 text-primary"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2">1. Pemilihan Bahan</h3>
+                        <p class="text-muted-foreground">
+                            Kami memilih kulit sapi asli berkualitas tinggi dari pemasok terpercaya, memastikan setiap lembar kulit
+                            memiliki tekstur dan ketahanan yang optimal.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="bi bi-pencil-square fs-4 text-primary"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2">2. Desain</h3>
+                        <p class="text-muted-foreground">
+                            Tim desainer kami menciptakan pola dan desain yang menggabungkan estetika tradisional dengan kebutuhan
+                            modern, memperhatikan setiap detail.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="bi bi-tools fs-4 text-primary"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2">3. Pengerjaan</h3>
+                        <p class="text-muted-foreground">
+                            Pengrajin terampil kami memotong, membentuk, dan menjahit kulit dengan teknik tradisional yang telah
+                            disempurnakan selama bertahun-tahun.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step">
+                        <div class="process-icon">
+                            <i class="bi bi-clock fs-4 text-primary"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2">4. Finishing</h3>
+                        <p class="text-muted-foreground">
+                            Setiap produk melalui proses finishing yang teliti, termasuk pewarnaan, pelapisan pelindung, dan
+                            pemeriksaan kualitas yang ketat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top bg-white">
+        <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+            <div class="fw-bold fs-4 mb-3">
+                DEKRAFMAN
+            </div>
+            <p class="text-muted">
+                Kerajinan kulit premium buatan tangan dengan kualitas terbaik.
+            </p>
+            <h6 class="fw-semibold mt-4 mb-2">Ikuti Kami</h6>
+            <div class="d-flex gap-3">
+                <a href="https://www.instagram.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram text-primary fs-5"></i>
+                </a>
+                <a href="https://www.facebook.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-primary fs-5"></i>
+                </a>
+            </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Produk</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Sepatu</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tas</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Dompet</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Gantungan Kunci</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">Aksesoris</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Halaman</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Beranda</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tentang Kami</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Produk</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Lokasi</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-5">
+            <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+            <ul class="list-unstyled text-muted">
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                Kranding, RT.33 RW14, Kranding, Bendorejo, Kec. Pogalan, Kabupaten Trenggalek, Jawa Timur 66371
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill text-primary me-2"></i>
+                +62 813 3434 9057
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill text-primary me-2"></i>
+                info@dekrafman.com
+                </li>
+            </ul>
+            <div class="mt-4">
+                <h6 class="fw-semibold mb-2">Belanja di Marketplace</h6>
+                <div class="d-flex gap-2">
+                    <a href="https://www.tokopedia.com/dekrafman" class="btn btn-sm text-white" style="background-color: #42B549;">Tokopedia</a>
+                    <a href="https://shopee.co.id/dekrafman" class="btn btn-sm text-white" style="background-color: #EE4D2D;">Shopee</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="pt-4 mt-5 border-top text-center text-muted small">
+            © <script>document.write(new Date().getFullYear())</script> Dekrafman. Hak Cipta Dilindungi.
+        </div>
+        </div>
+    </footer>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add hover effect for links
+        document.querySelectorAll('.hover-primary').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.classList.add('text-primary');
+            });
+            link.addEventListener('mouseout', () => {
+                link.classList.remove('text-primary');
+            });
+        });
+    </script>
+</body>
+</html>
