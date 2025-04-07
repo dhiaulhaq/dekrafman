@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi Kami - Dekrafman</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Lucide Icons (to replace the ones used in original code) -->
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --bs-primary: #f97415;
+            --bs-primary-rgb: 249, 116, 21;
+        }
+        
+        .btn-primary {
+            --bs-btn-bg: var(--bs-primary);
+            --bs-btn-border-color: var(--bs-primary);
+            --bs-btn-hover-bg: #e06613;
+            --bs-btn-hover-border-color: #d45f12;
+            --bs-btn-active-bg: #d45f12;
+            --bs-btn-active-border-color: #c85911;
+            --bs-btn-disabled-bg: var(--bs-primary);
+            --bs-btn-disabled-border-color: var(--bs-primary);
+        }
+        
+        .text-primary {
+            color: var(--bs-primary) !important;
+        }
+        
+        .bg-primary {
+            background-color: var(--bs-primary) !important;
+        }
+        
+        .hero-section {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+        }
+        
+        .image-hover-zoom {
+            transition: transform 0.3s ease;
+        }
+        
+        .image-hover-zoom:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link.active {
+            color: var(--bs-primary) !important;
+            font-weight: 500;
+        }
+        
+        .text-muted-foreground {
+            color: #6c757d !important;
+        }
+        
+        .bg-muted {
+            background-color: #f8f9fa !important;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .social-icon:hover {
+            background-color: rgba(var(--bs-primary-rgb), 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="sticky-top bg-white border-bottom">
+        <div class="container">
+            <nav class="navbar navbar-expand-md py-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-4" href="../index.html">
+                        DEKRAFMAN
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../about/index.html">Tentang Kami</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../products/index.html">Produk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../location/index.html">Lokasi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../faq/index.html">FAQ</a>
+                            </li>
+                            <li class="nav-item d-none d-md-block ms-2">
+                                <a class="btn btn-primary" href="https://wa.me/6281334349057">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="https://placehold.co/600x400" alt="Lokasi Dekrafman">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container d-flex flex-column justify-content-center align-items-center text-center text-white">
+            <h1 class="display-4 fw-bold mb-4">Lokasi Kami</h1>
+            <p class="lead text-light mx-auto" style="max-width: 700px;">
+                Kunjungi workshop dan toko kami untuk melihat langsung proses pembuatan dan koleksi produk kerajinan kulit
+            </p>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 py-md-5 py-lg-5">
+        <div class="container">
+            <div class="row g-4 g-md-5 align-items-start">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Temukan Kami</h2>
+                    <p class="text-muted-foreground">
+                        Kami berlokasi di Trenggalek dan mudah untuk diakses.
+                        Kunjungi workshop dan toko kami untuk melihat langsung proses pembuatan kerajinan kulit dan menjelajahi
+                        koleksi lengkap produk kami.
+                    </p>
+
+                    <div class="mt-5">
+                        <div class="d-flex mb-4">
+                            <i data-lucide="map-pin" class="text-primary me-3" style="width: 20px; height: 20px;"></i>
+                            <div>
+                                <h3 class="h6 fw-medium">Alamat</h3>
+                                <p class="text-muted-foreground mb-0">
+                                    Kranding, RT.33 RW14, Kranding, Bendorejo, Kec. Pogalan, Kabupaten Trenggalek, Jawa Timur 66371
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <i data-lucide="clock" class="text-primary me-3" style="width: 20px; height: 20px;"></i>
+                            <div>
+                                <h3 class="h6 fw-medium">Jam Operasional</h3>
+                                <div class="text-muted-foreground">
+                                    <p class="mb-1">Senin - Kamis: 08.00 - 21.00 WIB</p>
+                                    <p class="mb-1">Jum'at: 09.00 - 21.00 WIB</p>
+                                    <p class="mb-1">Sabtu: 08.00 - 22.00 WIB</p>
+                                    <p class="mb-0">Minggu: 08.00 - 21.00 WIB</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <i data-lucide="phone" class="text-primary me-3" style="width: 20px; height: 20px;"></i>
+                            <div>
+                                <h3 class="h6 fw-medium">Telepon</h3>
+                                <p class="text-muted-foreground mb-0">+62 813 3434 9057</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <i data-lucide="mail" class="text-primary me-3" style="width: 20px; height: 20px;"></i>
+                            <div>
+                                <h3 class="h6 fw-medium">Email</h3>
+                                <p class="text-muted-foreground mb-0">info@dekrafman.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="ratio ratio-4x3 border rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d246.87406232672225!2d111.7591619!3d-8.1030091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e791b880a67f9c1%3A0x1f51d644c23da9cb!2sdekrafman!5e0!3m2!1sen!2sid!4v1744017743551!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Gallery -->
+    <section class="py-5 py-md-5 py-lg-5 bg-muted">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Galeri Workshop</h2>
+                <p class="text-muted-foreground mx-auto" style="max-width: 700px;">Lihat suasana workshop dan toko kami</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="overflow-hidden rounded">
+                        <img src="https://placehold.co/400" alt="Area Pemotongan Kulit" class="img-fluid w-100 image-hover-zoom" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="overflow-hidden rounded">
+                        <img src="https://placehold.co/400" alt="Proses Penjahitan" class="img-fluid w-100 image-hover-zoom" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="overflow-hidden rounded">
+                        <img src="https://placehold.co/400" alt="Area Display Toko" class="img-fluid w-100 image-hover-zoom" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="overflow-hidden rounded">
+                        <img src="https://placehold.co/400" alt="Pengrajin Sedang Bekerja" class="img-fluid w-100 image-hover-zoom" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="overflow-hidden rounded">
+                        <img src="https://placehold.co/400" alt="Bahan Baku Kulit" class="img-fluid w-100 image-hover-zoom" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="overflow-hidden rounded">
+                        <img src="https://placehold.co/400" alt="Ruang Workshop" class="img-fluid w-100 image-hover-zoom" style="aspect-ratio: 4/3; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top bg-white">
+        <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3">
+            <div class="fw-bold fs-4 mb-3">
+                DEKRAFMAN
+            </div>
+            <p class="text-muted">
+                Kerajinan kulit premium buatan tangan dengan kualitas terbaik.
+            </p>
+            <h6 class="fw-semibold mt-4 mb-2">Ikuti Kami</h6>
+            <div class="d-flex gap-3">
+                <a href="https://www.instagram.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram text-primary fs-5"></i>
+                </a>
+                <a href="https://www.facebook.com/dekrafman/" class="btn btn-outline-secondary social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-primary fs-5"></i>
+                </a>
+            </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Produk</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Sepatu</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tas</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Dompet</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Gantungan Kunci</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">Aksesoris</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-2">
+            <h5 class="fw-semibold mb-3">Halaman</h5>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Beranda</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tentang Kami</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Produk</a></li>
+                <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Lokasi</a></li>
+                <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+            </ul>
+            </div>
+    
+            <div class="col-md-6 col-lg-5">
+            <h5 class="fw-semibold mb-3">Hubungi Kami</h5>
+            <ul class="list-unstyled text-muted">
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                Kranding, RT.33 RW14, Kranding, Bendorejo, Kec. Pogalan, Kabupaten Trenggalek, Jawa Timur 66371
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill text-primary me-2"></i>
+                +62 813 3434 9057
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill text-primary me-2"></i>
+                info@dekrafman.com
+                </li>
+            </ul>
+            <div class="mt-4">
+                <h6 class="fw-semibold mb-2">Belanja di Marketplace</h6>
+                <div class="d-flex gap-2">
+                    <a href="https://www.tokopedia.com/dekrafman" class="btn btn-sm text-white" style="background-color: #42B549;">Tokopedia</a>
+                    <a href="https://shopee.co.id/dekrafman" class="btn btn-sm text-white" style="background-color: #EE4D2D;">Shopee</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="pt-4 mt-5 border-top text-center text-muted small">
+            © <script>document.write(new Date().getFullYear())</script> Dekrafman. Hak Cipta Dilindungi.
+        </div>
+        </div>
+    </footer>  
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
